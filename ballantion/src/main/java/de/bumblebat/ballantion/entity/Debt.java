@@ -32,6 +32,7 @@ public class Debt implements Serializable {
     @NotNull
     @ManyToOne
     private Person debtor;
+    
     @NotNull
     @ManyToOne
     private Person debtHolder;
@@ -50,6 +51,9 @@ public class Debt implements Serializable {
     @NotNull
     @Enumerated(STRING)
     private ExpensesType type;
+    
+    private boolean open;
+    
 
     public Debt() {
     }
