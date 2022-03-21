@@ -29,23 +29,23 @@ public class YearOverview implements Serializable {
     
     private Year year;
     
-    private Map<ExpensesType, Double> expensesByType = new HashMap<>();
+    private Map<ExpenseType, Double> expensesByType = new HashMap<>();
 
     public YearOverview() {
     }
 
-    public YearOverview(Long id, Year year, Map<ExpensesType, Double> expensesByType) {
+    public YearOverview(Long id, Year year, Map<ExpenseType, Double> expensesByType) {
         this.id = id;
         this.year = year;
         this.expensesByType = expensesByType;
     }
 
-    public YearOverview(Year year, Map<ExpensesType, Double> expensesByType) {
+    public YearOverview(Year year, Map<ExpenseType, Double> expensesByType) {
         this.year = year;
         this.expensesByType = expensesByType;
     }
     
-    public void add(ExpensesType type, Double price){
+    public void add(ExpenseType type, Double price){
         expensesByType.put(type, price);
     }
     
@@ -59,11 +59,11 @@ public class YearOverview implements Serializable {
         return year;
     }
 
-    public Map<ExpensesType, Double> getExpensesByType() {
+    public Map<ExpenseType, Double> getExpensesByType() {
         return expensesByType;
     }
 
-    public void setExpensesByType(Map<ExpensesType, Double> expensesByType) {
+    public void setExpensesByType(Map<ExpenseType, Double> expensesByType) {
         this.expensesByType = expensesByType;
     }
 

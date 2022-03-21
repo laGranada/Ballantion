@@ -50,7 +50,7 @@ public class Debt implements Serializable {
     
     @NotNull
     @Enumerated(STRING)
-    private ExpensesType type;
+    private ExpenseType type;
     
     private boolean open;
     
@@ -58,7 +58,7 @@ public class Debt implements Serializable {
     public Debt() {
     }
 
-    public Debt(Long id, Person debtor, Person debtHolder, double price, String description, Person person, LocalDateTime occurence, ExpensesType type) {
+    public Debt(Long id, Person debtor, Person debtHolder, double price, String description, Person person, LocalDateTime occurence, ExpenseType type) {
         this.id = id;
         this.debtor = debtor;
         this.debtHolder = debtHolder;
@@ -122,11 +122,11 @@ public class Debt implements Serializable {
         this.occurence = occurence;
     }
     
-    public ExpensesType getType() {
+    public ExpenseType getType() {
         return type;
     }
     
-    public void setType(ExpensesType type) {
+    public void setType(ExpenseType type) {
         this.type = type;
     }
 //</editor-fold>

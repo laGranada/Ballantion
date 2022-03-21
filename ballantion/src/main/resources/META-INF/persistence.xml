@@ -3,8 +3,8 @@
   <!-- Define Persistence Unit -->
   <persistence-unit name="my_persistence_unit">
     <class>de.bumblebat.ballantion.entity.Person</class>
-    <class>de.bumblebat.ballantion.entity.Expenses</class>
     <class>de.bumblebat.ballantion.entity.Debt</class>
     <class>de.bumblebat.ballantion.entity.UserAccount</class>
+    <class>de.bumblebat.ballantion.entity.Expense</class>
   </persistence-unit>
 </persistence>

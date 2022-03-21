@@ -5,7 +5,7 @@
  */
 package de.bumblebat.ballantion.web;
 
-import de.bumblebat.ballantion.entity.Expenses;
+import de.bumblebat.ballantion.entity.Expense;
 import de.bumblebat.ballantion.entity.Person;
 import de.bumblebat.ballantion.entity.YearOverview;
 import de.bumblebat.ballantion.stub.BallantionStub;
@@ -34,13 +34,13 @@ public class BallantionController implements Serializable{
     
     private Person user;
     
-    private List<Expenses> currentMonthExpenses = new ArrayList<>();
+    private List<Expense> currentMonthExpenses = new ArrayList<>();
     
     private double currentMonthTotalExpenses;
     
-    private List<Expenses> selectedMonthExpenses = new ArrayList<>();
+    private List<Expense> selectedMonthExpenses = new ArrayList<>();
     
-    private List<Expenses> currentYearExpenses = new ArrayList<>();
+    private List<Expense> currentYearExpenses = new ArrayList<>();
     private Month selectedMonth;
     
     private YearOverview selectedYearOverview;

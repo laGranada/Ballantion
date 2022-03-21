@@ -23,7 +23,7 @@ import javax.validation.constraints.NotNull;
  * @author MaggieSaurusRex
  */
 @Entity
-public class Expenses implements Serializable {
+public class Expense implements Serializable {
 
 
     @Id
@@ -43,7 +43,7 @@ public class Expenses implements Serializable {
     
     @NotNull
     @Enumerated(STRING)
-    private ExpensesType type;
+    private ExpenseType type;
     
     @NotNull
     private boolean monthly;
@@ -88,11 +88,11 @@ public class Expenses implements Serializable {
         this.occurence = occurence;
     }
     
-    public ExpensesType getType() {
+    public ExpenseType getType() {
         return type;
     }
     
-    public void setType(ExpensesType type) {
+    public void setType(ExpenseType type) {
         this.type = type;
     }
     
@@ -124,7 +124,7 @@ public class Expenses implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Expenses other = (Expenses) obj;
+        final Expense other = (Expense) obj;
         if (!Objects.equals(this.id, other.id)) {
             return false;
         }
